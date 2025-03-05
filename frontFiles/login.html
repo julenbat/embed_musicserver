@@ -40,8 +40,8 @@
 			})
 			.then( async (data) => {
 				const {status} = data;
-				if(!status == 200) throw new Exception("Wrong Loggin bitch")
-				if(status == 200) challenge((await data.json())['challenge_tkn'] || throw new Error("Upsieeee, no challenge_tkn on response body ayye, how is that ?"))
+				if(!status == 200) throw new Exception("Wrong Loggin bitch");
+				challenge((await data.json())['challenge_tkn'] || throw new Error("Upsieeee, no challenge_tkn on response body ayye, how is that ?"))
 			})
 			.catch(e => console.error(e) )
 			.finally(submitEl.removeAttribute('disabled'))
