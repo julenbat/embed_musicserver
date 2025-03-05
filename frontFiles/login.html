@@ -59,8 +59,8 @@
 			*/
 			fetch('/api/v1/login', { method: 'POST', headers:{"verifyMe": tkn} })
 			.then( {status} => { 
-				if(status === 401) yieBoi()
-				else if(status === handleSuccess)
+				if(status === 401) wrongTokenAuthSus();
+				else if(status === 200) yieBoi();
 
 			 })
 			.catch(e => console.error(e))
